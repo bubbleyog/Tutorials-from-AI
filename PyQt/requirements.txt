@@ -1,0 +1,19 @@
+# PyQt科研应用编程教程 - 依赖包
+# 安装命令: pip install -r requirements.txt
+
+# 核心GUI框架
+PyQt6>=6.5.0
+
+# 科学计算
+numpy>=1.24.0
+scipy>=1.10.0
+
+# 绑图库
+matplotlib>=3.7.0
+
+# 串口通信
+pyserial>=3.5
+
+# 可选：高性能绑图（第八章扩展）
+# pyqtgraph>=0.13.0
+
