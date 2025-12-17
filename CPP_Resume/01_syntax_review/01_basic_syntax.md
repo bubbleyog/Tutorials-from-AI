@@ -282,6 +282,7 @@ for (int& n : numbers) {
 // const 引用（避免拷贝，不修改）
 for (const auto& n : numbers) {
     std::cout << n << " ";
+    n *= 2;  // 这行会报错
 }
 
 // while 循环
