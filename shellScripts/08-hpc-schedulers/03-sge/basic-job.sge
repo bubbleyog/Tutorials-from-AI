@@ -1,0 +1,31 @@
+#!/bin/bash
+#$ -N sge-basic-demo
+#$ -q all.q
+#$ -cwd
+#$ -pe smp 1
+#$ -l h_rt=00:05:00
+#$ -o logs/sge_$JOB_NAME_$JOB_ID.out
+#$ -e logs/sge_$JOB_NAME_$JOB_ID.err
+
+# 说明：
+# - $JOB_ID / $JOB_NAME 是SGE常见环境变量
+# - -cwd 表示以提交目录为工作目录
+# - -pe smp 1 申请1个核（PE名称与含义按集群配置为准）
+
+set -euo pipefail
+
+echo "=== SGE Basic Job ==="
+echo "JOB_ID=${JOB_ID:-unknown}"
+echo "JOB_NAME=${JOB_NAME:-unknown}"
+echo "SGE_O_WORKDIR=${SGE_O_WORKDIR:-unknown}"
+echo "Start Time: $(date +"%F %T")"
+
+# SGE_O_WORKDIR通常是提交目录
+if [[ -n "${SGE_O_WORKDIR:-}" ]]; then
+  cd "$SGE_O_WORKDIR"
+fi
+
+echo "Running workload..."
+sleep 3
+
+echo "Done. End Time: $(date +"%F %T")"

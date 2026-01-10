@@ -1,0 +1,2 @@
+run_id,seed,exit_code,metric,stdout_log,stderr_log
+seed-1,1,0,0.134364,/home/jupiter/study/tutorials/shellScripts/04-python-automation/results/20251228-234344/logs/seed-1.out.log,/home/jupiter/study/tutorials/shellScripts/04-python-automation/results/20251228-234344/logs/seed-1.err.log

@@ -1,0 +1,6 @@
+run_id,seed,exit_code,metric,stdout_log,stderr_log
+seed-1,1,0,0.134364,/home/jupiter/study/tutorials/shellScripts/04-python-automation/results/20251228-234628/logs/seed-1.out.log,/home/jupiter/study/tutorials/shellScripts/04-python-automation/results/20251228-234628/logs/seed-1.err.log
+seed-2,2,0,0.956034,/home/jupiter/study/tutorials/shellScripts/04-python-automation/results/20251228-234628/logs/seed-2.out.log,/home/jupiter/study/tutorials/shellScripts/04-python-automation/results/20251228-234628/logs/seed-2.err.log
+seed-3,3,0,0.237965,/home/jupiter/study/tutorials/shellScripts/04-python-automation/results/20251228-234628/logs/seed-3.out.log,/home/jupiter/study/tutorials/shellScripts/04-python-automation/results/20251228-234628/logs/seed-3.err.log
+seed-4,4,0,0.236048,/home/jupiter/study/tutorials/shellScripts/04-python-automation/results/20251228-234628/logs/seed-4.out.log,/home/jupiter/study/tutorials/shellScripts/04-python-automation/results/20251228-234628/logs/seed-4.err.log
+seed-5,5,0,0.622902,/home/jupiter/study/tutorials/shellScripts/04-python-automation/results/20251228-234628/logs/seed-5.out.log,/home/jupiter/study/tutorials/shellScripts/04-python-automation/results/20251228-234628/logs/seed-5.err.log

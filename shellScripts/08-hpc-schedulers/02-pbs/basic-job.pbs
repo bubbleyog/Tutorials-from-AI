@@ -1,0 +1,30 @@
+#!/bin/bash
+#PBS -N pbs-basic-demo
+#PBS -q default
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -l walltime=00:05:00
+#PBS -o logs/pbs_%N_%j.out
+#PBS -e logs/pbs_%N_%j.err
+
+# 说明：
+# - %N: 作业名（部分实现支持）
+# - %j: 作业ID（部分实现支持）
+# - 有的PBS不支持上面的%变量展开，需要写绝对路径或固定文件名
+
+set -euo pipefail
+
+echo "=== PBS Basic Job ==="
+echo "PBS_JOBID=${PBS_JOBID:-unknown}"
+echo "PBS_O_WORKDIR=${PBS_O_WORKDIR:-unknown}"
+echo "Start Time: $(date +"%F %T")"
+
+# PBS通常用PBS_O_WORKDIR表示提交目录
+if [[ -n "${PBS_O_WORKDIR:-}" ]]; then
+  cd "$PBS_O_WORKDIR"
+fi
+
+# 模拟任务
+echo "Running workload..."
+sleep 3
+
+echo "Done. End Time: $(date +"%F %T")"

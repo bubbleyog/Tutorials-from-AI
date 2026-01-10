@@ -1,0 +1,2 @@
+time=2025-12-28T23:38:00+08:00	name=Combined	mode=dev	run_id=	seed=11	metric=0.452380	python=/home/jupiter/anaconda3/bin/python3
+[2025-12-28T23:38:00+08:00] ERROR: simulated failure
