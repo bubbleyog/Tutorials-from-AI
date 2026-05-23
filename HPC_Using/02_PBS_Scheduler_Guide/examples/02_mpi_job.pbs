@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# ==================== PBS Directives ====================
+#PBS -N MPI_Job
+#PBS -l nodes=2:ppn=20     # 申请 2 个节点，每个节点 20 个核 (共 40 核)
+#PBS -l walltime=01:00:00
+#PBS -q batch
+#PBS -j oe
+
+# ==================== Shell Commands ====================
+cd $PBS_O_WORKDIR
+
+echo "Job ID: $PBS_JOBID"
+
+# 加载 MPI 环境 (不同集群名称可能不同，如 openmpi, intel-mpi)
+module load openmpi/4.0.3
+
+# 获取分配的计算节点列表文件
+# PBS 会把分配给你的机器列表存在 $PBS_NODEFILE 变量指向的文件里
+echo "Allocated nodes:"
+cat $PBS_NODEFILE
+
+# 运行 MPI 程序
+# -np 指定进程数。我们可以通过 counting $PBS_NODEFILE 行数来自动确定
+NP=$(cat $PBS_NODEFILE | wc -l)
+
+echo "Running with $NP processes..."
+
+# mpirun 会根据 $PBS_NODEFILE 自动把任务分发到各个节点
+mpirun -np $NP ./my_mpi_program
+
+# 如果没有实际程序，可以用 hostname 演示
+# mpirun -np $NP hostname

@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# ==================== PBS Directives ====================
+#PBS -N GPU_DeepLearning
+#PBS -l nodes=1:ppn=1:gpus=1  # 申请 1 个节点，1 个 CPU 核，1 张 GPU 卡
+#PBS -l walltime=04:00:00
+#PBS -q gpu                   # 指定提交到 GPU 队列 (通常必须指定)
+#PBS -j oe
+
+# ==================== Shell Commands ====================
+cd $PBS_O_WORKDIR
+
+echo "Job ID: $PBS_JOBID"
+
+# 加载 CUDA 和 cuDNN 模块
+module load cuda/11.2
+module load cudnn/8.1
+module load anaconda3
+
+# 激活你的 Python 虚拟环境
+source activate my_pytorch_env
+
+# 检查 GPU 是否可见
+echo "Detailed GPU Info:"
+nvidia-smi
+
+echo "Starting training..."
+python train_model.py
+
+echo "Training finished."

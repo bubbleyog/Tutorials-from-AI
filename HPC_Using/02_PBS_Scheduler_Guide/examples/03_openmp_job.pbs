@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# ==================== PBS Directives ====================
+#PBS -N OpenMP_Job
+#PBS -l nodes=1:ppn=20     # 申请 1 个完整节点 (假设该节点有 20 核)
+#PBS -l walltime=00:30:00
+#PBS -q batch
+#PBS -j oe
+
+# ==================== Shell Commands ====================
+cd $PBS_O_WORKDIR
+
+echo "Job ID: $PBS_JOBID"
+
+module load gcc/9.3.0
+
+# 设置 OpenMP 线程数
+# 这一步至关重要，必须设置为申请到的 ppn 数量
+# 如果不设置，程序可能会试图使用所有核心，或者只使用 1 个核心
+export OMP_NUM_THREADS=$PBS_NUM_PPN
+# 如果 $PBS_NUM_PPN 变量不可用，可以手动写死: export OMP_NUM_THREADS=20
+
+echo "Running with OMP_NUM_THREADS = $OMP_NUM_THREADS"
+
+# 运行支持 OpenMP 的程序
+./my_openmp_program
+
+# 示例: 打印环境变量确认
+# env | grep OMP
