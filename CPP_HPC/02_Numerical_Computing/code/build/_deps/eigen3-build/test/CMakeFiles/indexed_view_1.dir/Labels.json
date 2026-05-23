@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/jupiter/study/tutorials/CPP_HPC/02_Numerical_Computing/code/build/_deps/eigen3-src/test/indexed_view.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildOfficial"
+		],
+		"name" : "indexed_view_1"
+	}
+}

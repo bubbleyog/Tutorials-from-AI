@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/jupiter/study/tutorials/CPP_HPC/02_Numerical_Computing/code/build/_deps/eigen3-src/unsupported/test/bessel_functions.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildUnsupported"
+		],
+		"name" : "bessel_functions_2"
+	}
+}

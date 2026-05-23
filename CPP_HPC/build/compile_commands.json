@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/jupiter/study/tutorials/CPP_HPC/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -O3 -march=native -o CMakeFiles/matrix_performance.dir/matrix_performance.cpp.o -c /home/jupiter/study/tutorials/CPP_HPC/01_Modern_CPP_Base/code/matrix_performance.cpp",
+  "file": "/home/jupiter/study/tutorials/CPP_HPC/01_Modern_CPP_Base/code/matrix_performance.cpp",
+  "output": "CMakeFiles/matrix_performance.dir/matrix_performance.cpp.o"
+}
+]

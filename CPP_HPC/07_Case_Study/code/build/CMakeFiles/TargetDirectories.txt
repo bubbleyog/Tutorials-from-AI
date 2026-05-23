@@ -1,0 +1,4 @@
+/home/jupiter/study/tutorials/CPP_HPC/07_Case_Study/code/build/CMakeFiles/nbody_core.dir
+/home/jupiter/study/tutorials/CPP_HPC/07_Case_Study/code/build/CMakeFiles/nbody_omp.dir
+/home/jupiter/study/tutorials/CPP_HPC/07_Case_Study/code/build/CMakeFiles/edit_cache.dir
+/home/jupiter/study/tutorials/CPP_HPC/07_Case_Study/code/build/CMakeFiles/rebuild_cache.dir

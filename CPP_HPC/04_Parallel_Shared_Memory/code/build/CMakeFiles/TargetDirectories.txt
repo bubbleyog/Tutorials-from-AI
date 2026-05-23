@@ -1,0 +1,4 @@
+/home/jupiter/study/tutorials/CPP_HPC/04_Parallel_Shared_Memory/code/build/CMakeFiles/omp_demo.dir
+/home/jupiter/study/tutorials/CPP_HPC/04_Parallel_Shared_Memory/code/build/CMakeFiles/thread_demo.dir
+/home/jupiter/study/tutorials/CPP_HPC/04_Parallel_Shared_Memory/code/build/CMakeFiles/edit_cache.dir
+/home/jupiter/study/tutorials/CPP_HPC/04_Parallel_Shared_Memory/code/build/CMakeFiles/rebuild_cache.dir
